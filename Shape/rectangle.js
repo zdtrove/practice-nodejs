@@ -13,5 +13,7 @@ module.exports = {
     circumference: (width, height) => {
         return 2 * (width + height);
     },
-    currentDateTime: Date()
+    currentDateTime: Date(),
+    directoryName: __dirname,
+    fileName: __filename
 }
