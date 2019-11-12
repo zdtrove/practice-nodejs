@@ -4,7 +4,11 @@
   "description": "A project to practice nodejs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start1": "babel-node src/index.js",
+    "start": "nodemon src/index.js --exec babel-node",
+    "build": "babel src -d distribution",
+    "serve": "node distribution/index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,16 @@
   "bugs": {
     "url": "https://github.com/zdtrove/practice-nodejs/issues"
   },
-  "homepage": "https://github.com/zdtrove/practice-nodejs#readme"
+  "homepage": "https://github.com/zdtrove/practice-nodejs#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/node": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^1.19.4"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.7.0"
+  }
 }
